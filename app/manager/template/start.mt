@@ -4,6 +4,11 @@
 
 ? if (my $target = $app->query->param('app')) {
 <h3><?= $target ?> アプリケーション</h3>
+?   if (defined $c->{error} && scalar @{$c->{error}}) {
+<div style="color:#c00">エラーがあるため、アクティブにできません</div>
+? use Data::Dumper;
+<pre><?= Dumper $c->{error} ?></pre>
+? }
 <?= $app->render_form ?>
 
 ?   if ($app->query->param('status') eq 'stop') {
