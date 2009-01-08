@@ -20,6 +20,7 @@ sub run {
     open my $fh, "tar -C $data_dir -cO $target | gzip |";
     local $/;
     my $archive = raw_string(<$fh>);
+    close $fh;
     return $archive;
 }
 
