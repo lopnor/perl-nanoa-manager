@@ -8,3 +8,8 @@ appディレクトリ内のmanagerをコピーして使ってください。
 - File::Remove
 
 を使っています。入っていない環境の場合はCPANからインストールしてください。
+
+- HTML::AutoForm
+- plugin::admin
+
+はcodereposの最新版を使ってください。
